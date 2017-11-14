@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Starting the Testscript]]>
+    </line>
+    <line>
+      <![CDATA[Launching the Browser]]>
+    </line>
+    <line>
+      <![CDATA[Browser is launched and navigated to the AUTURL]]>
+    </line>
+    <line>
+      <![CDATA[Title MatchesInsurance - Compare Insurance Policy Quotes - Life, Car, Health, Travel]]>
+    </line>
+    <line>
+      <![CDATA[Title matched]]>
+    </line>
+    <line>
+      <![CDATA[Title MatchesPolicyBazaar Two Wheeler Insurance]]>
+    </line>
+    <line>
+      <![CDATA[Two Wheeler page Title matched]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="58351" started-at="2017-11-14T16:43:28Z" finished-at="2017-11-14T16:44:27Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="58351" started-at="2017-11-14T16:43:28Z" finished-at="2017-11-14T16:44:27Z">
+      <class name="testScripts.Sample">
+        <test-method status="PASS" signature="policyWording()[pri:0, instance:testScripts.Sample@3498ed]" name="policyWording" duration-ms="58327" started-at="2017-11-14T22:13:28Z" finished-at="2017-11-14T22:14:27Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Starting the Testscript]]>
+            </line>
+            <line>
+              <![CDATA[Launching the Browser]]>
+            </line>
+            <line>
+              <![CDATA[Browser is launched and navigated to the AUTURL]]>
+            </line>
+            <line>
+              <![CDATA[Title MatchesInsurance - Compare Insurance Policy Quotes - Life, Car, Health, Travel]]>
+            </line>
+            <line>
+              <![CDATA[Title matched]]>
+            </line>
+            <line>
+              <![CDATA[Title MatchesPolicyBazaar Two Wheeler Insurance]]>
+            </line>
+            <line>
+              <![CDATA[Two Wheeler page Title matched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- policyWording -->
+      </class> <!-- testScripts.Sample -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

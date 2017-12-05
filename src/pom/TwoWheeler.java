@@ -1,10 +1,9 @@
 package pom;
 
-import java.util.Set;
-
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
 import util.Browser;
@@ -17,7 +16,10 @@ public class TwoWheeler
 	@FindBy (xpath = "//input[@id='regNo']") private WebElement RegistrationNo;
 	@FindBy (xpath = "//*[@id='action']/button[1]")private WebElement GetDetails;
 	
-	
+	public TwoWheeler()
+	{
+		PageFactory.initElements((WebDriver) Browser.driver, this);
+	}
 	public void pageTitle() throws Exception 
 	{
 		Thread.sleep(2000);

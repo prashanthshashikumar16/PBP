@@ -1,10 +1,7 @@
 package testScripts;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import util.TestListener;
 
 import pom.HomePage;
 import pom.PolicySummary;
@@ -31,35 +28,34 @@ public void policyWording() throws Exception
 		Reporter.log("Launching the Browser",true);
 		driver.getBrowser();
 		Reporter.log("Browser is launched and navigated to the AUTURL");
-		HomePage hp = PageFactory.initElements(Browser.driver,HomePage.class);
-		hp.pageTitle();
-		
+		HomePage hp = new HomePage();
+		hp.pageTitle();		
 		hp.TwoWheeler();
-		TwoWheeler tw = PageFactory.initElements(Browser.driver,TwoWheeler.class);
+		TwoWheeler tw = new TwoWheeler();
 		tw.pageTitle();
 		tw.EnterRegistration();
 		
-		Questions q = PageFactory.initElements(Browser.driver,Questions.class);
+		Questions q = new Questions();
 		q.previousInsurerDetailsMissing();
 		q.viewDetailsHeader();
 		q.viewQuotesBtnClick();
 		
-		Quotations quotation = PageFactory.initElements(Browser.driver, Quotations.class);
+		Quotations quotation = new Quotations();
 		quotation.clickQuote();
 		
-		ProposalStep1 ps1 = PageFactory.initElements(Browser.driver, ProposalStep1.class);
+		ProposalStep1 ps1 = new ProposalStep1();
 		ps1.PersonalInfo();
 		
-		ProposalStep2 ps2 = PageFactory.initElements(Browser.driver, ProposalStep2.class);
+		ProposalStep2 ps2 = new ProposalStep2();
 		ps2.enterNomineeName();
 		ps2.nomineeRelationship();
 		
-		ProposalStep3 ps3 = PageFactory.initElements(Browser.driver, ProposalStep3.class);
+		ProposalStep3 ps3 = new ProposalStep3();
 		ps3.step3();
 		
-		PolicySummary ps = PageFactory.initElements(Browser.driver, PolicySummary.class);
+		PolicySummary ps = new PolicySummary();
 		ps.payNow();
-		
+	
 		Thread.sleep(10000);
 		Browser.driver.quit();
 		

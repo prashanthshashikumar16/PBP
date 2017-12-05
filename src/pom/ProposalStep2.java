@@ -1,10 +1,11 @@
 package pom;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import util.Browser;
 import util.Extensions;
@@ -19,6 +20,10 @@ public class ProposalStep2
 	@FindBy(xpath = ".//*[@id='app']/div/div[2]/div[1]/div/div[2]/div[2]/div[3]/form/ul/li[4]/div[2]/div[1]/div/div[2]/div/div[31]") private WebElement spouseAge;
 	@FindBy(xpath = "//*[@value='next']") private WebElement continueToStep3;
 
+	public ProposalStep2()
+	{
+		PageFactory.initElements((WebDriver) Browser.driver, this);
+	}
 public void enterNomineeName() throws Exception
 	{
 		String nominee = XLLib.getStringData("ProposalStp2", 1, 0);

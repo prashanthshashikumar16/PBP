@@ -1,11 +1,12 @@
 package pom;
 
-import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Reporter;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
+import util.Browser;
 import util.Extensions;
 import util.XLLib;
 
@@ -17,12 +18,17 @@ public class Questions
 	@FindBy(xpath = "//*[text()='Select Previous Insurer']") private WebElement previousInsurer;
 	@FindBy (xpath = "//*[text()='View Quotes']") private WebElement viewQuotesBtn;
 	
+	public Questions()
+	{
+		PageFactory.initElements((WebDriver) Browser.driver, this);
+	}
+	
 	public void previousInsurerDetailsMissing() throws InterruptedException
 	{
 		Extensions.explicitWaitTillWebElementVisible(previousInsurerBajaj);
 		try {
 		previousInsurerBajaj.click();
-		}
+			}
 		catch (Exception e)
 		{
 			Thread.sleep(4000);

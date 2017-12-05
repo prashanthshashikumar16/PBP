@@ -5,7 +5,7 @@
     <classes>
       <class name="testScripts.Sample">
         <methods>
-          <include name="ViewQuote"/>
+          <include name="policyWording"/>
         </methods>
       </class> <!-- testScripts.Sample -->
     </classes>

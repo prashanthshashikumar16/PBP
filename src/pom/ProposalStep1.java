@@ -1,13 +1,11 @@
 package pom;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
-
+import org.openqa.selenium.support.PageFactory;
 import util.Browser;
 import util.Extensions;
 import util.XLLib;
@@ -22,12 +20,24 @@ public class ProposalStep1
 	@FindBy(xpath = "//*[@placeholder = 'Pincode']")private WebElement pincode;
 	@FindBy(xpath = "//*[text() = 'Continue to Step 2']") private WebElement proceedToStep2;
 	
-	
+	public ProposalStep1()
+	{
+		PageFactory.initElements((WebDriver) Browser.driver, this);
+	}
 	public void PersonalInfo() throws Exception
 
 	{
-		Extensions.explicitWaitTillWebElementVisible(owner);
-		owner.click();
+		try 
+		{
+			owner.click();
+			Extensions.explicitWaitTillWebElementVisible(owner);
+		}
+		catch(Exception e)
+		{
+			Extensions.switchToDefault();
+			owner.click();
+		}
+		
 		owner.sendKeys( XLLib.getStringData("ProposalStp1", 1, 0));
 		mobileNo.click();
 		Actions act = new Actions(Browser.driver);

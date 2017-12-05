@@ -10,25 +10,13 @@
     <line>
       <![CDATA[Browser is launched and navigated to the AUTURL]]>
     </line>
-    <line>
-      <![CDATA[Title MatchesInsurance - Compare Insurance Policy Quotes - Life, Car, Health, Travel]]>
-    </line>
-    <line>
-      <![CDATA[Title matched]]>
-    </line>
-    <line>
-      <![CDATA[Title MatchesPolicyBazaar Two Wheeler Insurance]]>
-    </line>
-    <line>
-      <![CDATA[Two Wheeler page Title matched]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47947" started-at="2017-11-14T16:04:21Z" finished-at="2017-11-14T16:05:09Z">
+  <suite name="Default suite" duration-ms="15018" started-at="2017-11-15T16:48:17Z" finished-at="2017-11-15T16:48:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47947" started-at="2017-11-14T16:04:21Z" finished-at="2017-11-14T16:05:09Z">
-      <class name="testScripts.Sample">
-        <test-method status="PASS" signature="policyWording()[pri:0, instance:testScripts.Sample@4dfa3a9d]" name="policyWording" duration-ms="47911" started-at="2017-11-14T21:34:21Z" finished-at="2017-11-14T21:35:09Z">
+    <test name="Default test" duration-ms="15018" started-at="2017-11-15T16:48:17Z" finished-at="2017-11-15T16:48:33Z">
+      <class name="testScripts.HealthInsurance">
+        <test-method status="PASS" signature="HealthInsuranceScript()[pri:0, instance:testScripts.HealthInsurance@e25b2fe]" name="HealthInsuranceScript" duration-ms="14994" started-at="2017-11-15T22:18:18Z" finished-at="2017-11-15T22:18:32Z">
           <reporter-output>
             <line>
               <![CDATA[Starting the Testscript]]>
@@ -39,21 +27,9 @@
             <line>
               <![CDATA[Browser is launched and navigated to the AUTURL]]>
             </line>
-            <line>
-              <![CDATA[Title MatchesInsurance - Compare Insurance Policy Quotes - Life, Car, Health, Travel]]>
-            </line>
-            <line>
-              <![CDATA[Title matched]]>
-            </line>
-            <line>
-              <![CDATA[Title MatchesPolicyBazaar Two Wheeler Insurance]]>
-            </line>
-            <line>
-              <![CDATA[Two Wheeler page Title matched]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- policyWording -->
-      </class> <!-- testScripts.Sample -->
+        </test-method> <!-- HealthInsuranceScript -->
+      </class> <!-- testScripts.HealthInsurance -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
